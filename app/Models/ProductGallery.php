@@ -10,7 +10,7 @@ class ProductGallery extends Model
     use SoftDeletes;
 
     protected $fillable = [
-    	'products_id', 'photo', 'is_default'
+    	'product_id', 'photo', 'is_default'
     ];
 
     protected $hidden = [
@@ -24,6 +24,6 @@ class ProductGallery extends Model
 
     public function getPhotoAttribute($value)
     {
-    	return asset('storage/'. $value);
+    	return url('storage/'. $value);
     }
 }
