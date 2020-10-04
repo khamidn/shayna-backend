@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controller\API;
+namespace App\Http\Controllers\API;
 
 
 class ResponseFormatter 
@@ -29,6 +29,6 @@ class ResponseFormatter
 		self::$response['meta']['message'] = $message;
 		self::$response['data'] = $data;
 
-		return response()->json(self::$response, $self::$response['meta']['code']);
+		return response()->json(self::$response, self::$response['meta']['code']);
 	}
 }
